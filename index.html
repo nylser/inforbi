@@ -55,13 +55,16 @@
 
     <!-- Header -->
     <header class="header" id="top">
-      <div class="text-vertical-center">
+      <div id="background-terminal">
+      </div>
+      <div class="text-vertical-center content">
         <h1>inforbi</h1>
         <h3>korbinian stein.</h3>
         <br>
         <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">über mich</a>
       </div>
     </header>
+
 
     <!-- About -->
     <section id="about" class="about">
@@ -269,8 +272,198 @@
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+
+
+
+
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="vendor/jquery-terminal/js/jquery.terminal.min.js"></script>
+
+    <script src="vendor/jquery-terminal/js/jquery.mousewheel-min.js"></script>
+
+    <link href="vendor/jquery-terminal/css/jquery.terminal.min.css" rel="stylesheet"/>
+
+    <iframe id="frmFile" src="msg.txt" onload="LoadFile();" style="display: none;"></iframe>
+
+    <script>
+      var content = null;
+
+      function LoadFile() {
+        var oFrame = document.getElementById("frmFile");
+        var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+        while (strRawContents.indexOf("\r") >= 0)
+          strRawContents = strRawContents.replace("\r", "");
+        var arrLines = strRawContents.split("\n");
+        content = arrLines;
+        for(var i = 0; i < content.length; i++){
+          console.log(content[i]);
+        }
+      }
+
+
+      function progress(percent, width) {
+          var size = Math.round(width*percent/100);
+          var left = '', taken = '', i;
+          for (i=size; i--;) {
+              taken += '=';
+          }
+          if (taken.length > 0) {
+              taken = taken.replace(/=$/, '>');
+          }
+          for (i=width-size; i--;) {
+              left += ' ';
+          }
+          return '[' + taken + left + '] ' + percent + '%';
+      }
+      var animation = false;
+      var timer;
+      var prompt;
+      var string;
+
+      var anim = false;
+      function typed(finish_typing, prompt_alt) {
+          return function(term, message, delay, finish) {
+              anim = true;
+              var prompt = term.get_prompt();
+              var c = 0;
+              if(!prompt_alt) {
+                prompt_alt = '';
+              }
+              if (message.length > 0) {
+                  term.set_prompt(prompt_alt);
+                  var interval = setInterval(function() {
+                      term.insert(message[c++]);
+                      if (c == message.length) {
+                          clearInterval(interval);
+                          // execute in next interval
+                          setTimeout(function() {
+                              // swap command with prompt
+                              finish_typing(term, message, prompt);
+                              anim = false
+                              finish && finish();
+                          }, delay);
+                      }
+                  }, delay);
+              }
+          };
+      }
+
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+
+      async function print_delay (term, message, delay) {
+        await sleep(delay);
+        term.echo(message);
+      }
+
+
+      var typed_prompt = typed(function(term, message, prompt) {
+          // swap command with prompt
+          term.set_command('');
+          term.set_prompt(message + ' ');
+      });
+      var typed_message = typed(function(term, message, prompt) {
+          term.set_command('');
+          term.echo(message);
+          term.set_prompt(prompt);
+      });
+
+      var typed_command = typed(function(term, message, prompt){
+          term.set_command('');
+          term.echo("inforbi> " + message);
+          term.set_prompt(prompt);
+      }, 'inforbi> ');
+
+
+
+      jQuery(function($, undefined) {
+      $('#background-terminal').terminal(function(command, term) {
+          if (command !== '') {
+              try {
+                  var result = window.eval(command);
+                  if (result !== undefined) {
+                      this.echo(new String(result));
+                  }
+              } catch(e) {
+                  this.error(new String(e));
+              }
+          } else {
+             this.echo('');
+          }
+          typed_message(term, msg, 200, function() {
+            finish = true;
+        });
+          typed_command(term, msg, 200, function() {
+          finish = true;
+      });
+      }, {
+          greetings: 'willkommen bei inforbi.de',
+          name: 'js_demo',
+          height: "100%",
+          width: "100%",
+          enable: true,
+          //focus: false,
+          prompt: 'inforbi> ',
+          onInit: function(term) {
+            function sleep(ms) {
+              return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            // first question
+            var msg = "init 0";
+            typed_command(term, msg, 50, async function() {
+              prompt = term.get_prompt();
+              term.set_prompt("");
+              await sleep(500);
+              term.echo("loading korbi-kernel v20...");
+              for(var i = 0; i < content.length; i++){
+                await sleep(Math.random()*10);
+                term.echo(content[i])
+              }
+
+              var i = 0, size = 30;
+              string = progress(0, size);
+              term.set_prompt(progress);
+              animation = true;
+              await sleep(500);
+              (async function loop() {
+                  string = progress(i++, size);
+                  term.set_prompt(string);
+                  if (i < 100) {
+                      timer = setTimeout(loop, 10);
+                  } else {
+                      term.echo(progress(i, size) + ' [[b;green;]OK]')
+                      term.set_prompt('');
+                      term.clear();
+                      animation = false
+                      await sleep(Math.random()*1000);
+                      term.echo("details:");
+                      await sleep(Math.random()*1000);
+                      term.echo("alter: 19");
+                      await sleep(Math.random()*1000);
+                      term.echo("name: korbinian stein");
+                      await sleep(Math.random()*1000);
+                      term.echo("beschäftigung: informatik-studium an der tum");
+                      term.set_prompt(prompt);
+                  }
+              })();
+
+            });
+          },
+          keydown: function(e) {
+              //disable keyboard when animating
+              if (anim) {
+                  return false;
+              }
+          }
+
+      });
+      });
+    </script>
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.js"></script>

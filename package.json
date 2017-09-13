@@ -1,8 +1,8 @@
 {
-  "title": "Stylish Portfolio",
-  "name": "startbootstrap-stylish-portfolio",
+  "title": "Inforbi",
+  "name": "inforbi-website",
   "version": "4.0.0-beta",
-  "description": "A stylish portfolio HTML template built with Bootstrap",
+  "description": "Portfolio inforbi.de",
   "keywords": [
     "css",
     "sass",
@@ -16,11 +16,6 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/issues",
     "email": "feedback@startbootstrap.com"
   },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio.git"
@@ -30,6 +25,7 @@
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
     "jquery.easing": "^1.4.1",
+    "jquery.terminal": "^1.7.0",
     "popper.js": "^1.11.1"
   },
   "devDependencies": {
