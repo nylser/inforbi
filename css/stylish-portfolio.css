@@ -135,7 +135,7 @@ hr.small {
 
 #menu-toggle {
     position: fixed;
-    z-index: 1;
+    z-index: 1;perso
     top: 0;
     right: 0;
 }
@@ -146,7 +146,7 @@ hr.small {
     -webkit-transition: all .4s ease 0s;
     -moz-transition: all .4s ease 0s;
     -ms-transition: all .4s ease 0s;
-    -o-transition: all .4s ease 0s;
+    -o-transition: all .4s ease 0s;perso
     transition: all .4s ease 0s;
 }
 
@@ -169,6 +169,13 @@ hr.small {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;*/
+}
+
+.header h1 {
+  color: lightgray;
+}
+.header h3 {
+  color: green;
 }
 
 .terminal>div {
@@ -213,6 +220,12 @@ hr.small {
 
 .about {
     padding: 50px 0;
+}
+
+#portrait {
+  border-radius: 50px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
 }
 
 

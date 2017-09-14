@@ -70,8 +70,25 @@
     <section id="about" class="about">
       <div class="container text-center">
         <h2>über mich</h2>
-        <p class="lead">This theme features some wonderful photography courtesy of
-          <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+        <p class="lead">Meine Person</p>
+        <img src="img/perso.jpg" class="img-fluid" id="portrait" width="300px" height="auto"/>
+        <ul class="list-unstyled">
+          <li class=lead>Korbinian Stein</li>
+          <hr class="small" />
+          <li>geboren im Jahr <b>1997</b></li>
+          <hr class="small" />
+          <li class="lead">Interessen</li>
+          <li>Frühe Entdeckung der technischen Ader</li>
+          <li>Beherrschung des Programmierens eigenständiges Lernen</li>
+          <li>Faszination für Computerarchitektur und Philosophie</li>
+          <li>Schnelle Lernfähigkeit für neue Programmiersprachen</li>
+          <hr class="small" />
+          <li class="lead">Lebenslauf</li>
+          <li>Abitur im Jahr <b>2017</b></li>
+          <li>Selbständigkeit zum Programmieren seit <b>März 2017</b></li>
+          <li>Studium der Informatik an der TU-München beginnend <b>Oktober 2017</b></li>
+        </ul>
+
       </div>
       <!-- /.container -->
     </section>
@@ -81,62 +98,54 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-lg-10 mx-auto">
-            <h2>Our Services</h2>
+            <h2>meine dienste</h2>
             <hr class="small">
             <div class="row">
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-6 col-sm-12">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-server fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                    <strong>Server Hosting- und Management</strong>
+                  </h4>
+                  <p>Einrichtung, Administration und (im beschränkte Umfang) Hosting von vielen Diensten zu guten Preisen.</p>
+                  <a href="#" class="btn btn-light">Mehr Information</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                   </span>
                   <h4>
-                    <strong>Service Name</strong>
+                    <strong>Webentwicklung</strong>
                   </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                  </span>
-                  <h4>
-                    <strong>Service Name</strong>
-                  </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <a href="#" class="btn btn-light">Learn More</a>
+                  <p>Design und Umsetzung von einfachen bis zu komplexen Konzepten. Ich arbeite mit Ihnen gemeinsam für eine saubere, moderne Lösung nach Ihren Wünschen.</p>
+                  <a href="#" class="btn btn-light">Mehr Information</a>
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-terminal fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                    <strong>Programm- und Skriptentwicklung</strong>
+                  </h4>
+                  <p>Von Planung und Umsetzug von neuen Programmen oder Plug-Ins, bis zur Aktualisierung oder Anpassung von bestehenden Programmen.</p>
+                  <p>Bevorzugte Programmiersprachen: Java, C#, C++, PHP, Python</p>
+                  <a href="#" class="btn btn-light">Mehr Information</a>
+                </div>
+              </div>
+            </div>
+
+
             <!-- /.row (nested) -->
           </div>
           <!-- /.col-lg-10 -->
@@ -149,7 +158,7 @@
     <!-- Callout -->
     <aside class="callout">
       <div class="text-vertical-center">
-        <h1>Vertically Centered Text</h1>
+        <h1>Flexible Lösungen durch jungen Denker</h1>
       </div>
     </aside>
 
@@ -287,183 +296,6 @@
 
     <iframe id="frmFile" src="msg.txt" onload="LoadFile();" style="display: none;"></iframe>
 
-    <script>
-      var content = null;
-
-      function LoadFile() {
-        var oFrame = document.getElementById("frmFile");
-        var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-        while (strRawContents.indexOf("\r") >= 0)
-          strRawContents = strRawContents.replace("\r", "");
-        var arrLines = strRawContents.split("\n");
-        content = arrLines;
-        for(var i = 0; i < content.length; i++){
-          console.log(content[i]);
-        }
-      }
-
-
-      function progress(percent, width) {
-          var size = Math.round(width*percent/100);
-          var left = '', taken = '', i;
-          for (i=size; i--;) {
-              taken += '=';
-          }
-          if (taken.length > 0) {
-              taken = taken.replace(/=$/, '>');
-          }
-          for (i=width-size; i--;) {
-              left += ' ';
-          }
-          return '[' + taken + left + '] ' + percent + '%';
-      }
-      var animation = false;
-      var timer;
-      var prompt;
-      var string;
-
-      var anim = false;
-      function typed(finish_typing, prompt_alt) {
-          return function(term, message, delay, finish) {
-              anim = true;
-              var prompt = term.get_prompt();
-              var c = 0;
-              if(!prompt_alt) {
-                prompt_alt = '';
-              }
-              if (message.length > 0) {
-                  term.set_prompt(prompt_alt);
-                  var interval = setInterval(function() {
-                      term.insert(message[c++]);
-                      if (c == message.length) {
-                          clearInterval(interval);
-                          // execute in next interval
-                          setTimeout(function() {
-                              // swap command with prompt
-                              finish_typing(term, message, prompt);
-                              anim = false
-                              finish && finish();
-                          }, delay);
-                      }
-                  }, delay);
-              }
-          };
-      }
-
-
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-
-
-      async function print_delay (term, message, delay) {
-        await sleep(delay);
-        term.echo(message);
-      }
-
-
-      var typed_prompt = typed(function(term, message, prompt) {
-          // swap command with prompt
-          term.set_command('');
-          term.set_prompt(message + ' ');
-      });
-      var typed_message = typed(function(term, message, prompt) {
-          term.set_command('');
-          term.echo(message);
-          term.set_prompt(prompt);
-      });
-
-      var typed_command = typed(function(term, message, prompt){
-          term.set_command('');
-          term.echo("inforbi> " + message);
-          term.set_prompt(prompt);
-      }, 'inforbi> ');
-
-
-
-      jQuery(function($, undefined) {
-      $('#background-terminal').terminal(function(command, term) {
-          if (command !== '') {
-              try {
-                  var result = window.eval(command);
-                  if (result !== undefined) {
-                      this.echo(new String(result));
-                  }
-              } catch(e) {
-                  this.error(new String(e));
-              }
-          } else {
-             this.echo('');
-          }
-          typed_message(term, msg, 200, function() {
-            finish = true;
-        });
-          typed_command(term, msg, 200, function() {
-          finish = true;
-      });
-      }, {
-          greetings: 'willkommen bei inforbi.de',
-          name: 'js_demo',
-          height: "100%",
-          width: "100%",
-          enable: true,
-          //focus: false,
-          prompt: 'inforbi> ',
-          onInit: function(term) {
-            function sleep(ms) {
-              return new Promise(resolve => setTimeout(resolve, ms));
-            }
-            // first question
-            var msg = "init 0";
-            typed_command(term, msg, 50, async function() {
-              prompt = term.get_prompt();
-              term.set_prompt("");
-              await sleep(500);
-              term.echo("loading korbi-kernel v20...");
-              for(var i = 0; i < content.length; i++){
-                await sleep(Math.random()*10);
-                term.echo(content[i])
-              }
-
-              var i = 0, size = 30;
-              string = progress(0, size);
-              term.set_prompt(progress);
-              animation = true;
-              await sleep(500);
-              (async function loop() {
-                  string = progress(i++, size);
-                  term.set_prompt(string);
-                  if (i < 100) {
-                      timer = setTimeout(loop, 10);
-                  } else {
-                      term.echo(progress(i, size) + ' [[b;green;]OK]')
-                      term.set_prompt('');
-                      term.clear();
-                      animation = false
-                      await sleep(Math.random()*1000);
-                      term.echo("details:");
-                      await sleep(Math.random()*1000);
-                      term.echo("alter: 19");
-                      await sleep(Math.random()*1000);
-                      term.echo("name: korbinian stein");
-                      await sleep(Math.random()*1000);
-                      term.echo("beschäftigung: informatik-studium an der tum");
-                      term.set_prompt(prompt);
-                  }
-              })();
-
-            });
-          },
-          keydown: function(e) {
-              //disable keyboard when animating
-              if (anim) {
-                  return false;
-              }
-          }
-
-      });
-      });
-    </script>
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.js"></script>
