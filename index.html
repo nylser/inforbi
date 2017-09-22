@@ -19,6 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
   </head>
 
@@ -199,7 +200,7 @@
     <aside class="call-to-action bg-primary text-white">
       <div class="container text-center">
         <h3>kontaktieren sie mich!</h3>
-        <a href="#" class="btn btn-lg btn-light">kontakt aufnehmen.</a>
+        <a href="#" class="btn btn-lg btn-light" data-toggle="modal" data-target="#contact-modal">kontakt aufnehmen.</a>
       </div>
     </aside>
 
@@ -262,10 +263,65 @@
       </a>
     </footer>
 
+    <!-- Modal contact dialog -->
+    <div id="contact-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">kontakt aufnehmen</h4>
+
+        </div>
+        <div class="modal-body">
+          <form id="contact-form" action="mailer.php" method="post" role="form" class="form-horizontal">
+              <div class="messages"></div>
+              <div class="controls">
+                  <div class="form-group row">
+                      <div class="col-md-12 nopadding row">
+                          <label style="padding-left:15px;" for="person">Name (*)</label>
+                      </div>
+                      <div id="person" class="col-md-2 nopadding person">
+                          <select name="anrede" id="anrede" class="form-control">
+                            <option>Herr</option>
+                            <option>Frau</option>
+                          </select>
+                      </div>
+                      <div class="col-md-5 nopadding">
+                          <input name="vorname" type="text" class="form-control" id="vorname" placeholder="Vorname" required/>
+                      </div>
+                      <div class="col-md-5 nopadding">
+                          <input name="nachname" type="text" class="form-control" id="nachname" placeholder="Nachname" required/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">E-Mail Adresse (*)</label>
+                      <input type="email" name="email" class="form-control" id="email" placeholder="E-Mail" required/>
+                  </div>
+                  <div class="form-group">
+                      <label for="telephone">Telefonnummer</label>
+                      <input type="tel" pattern='^[0-9\-\+\s\(\)]*$' name="telefon" class="form-control" id="telephone" placeholder="Telefonnummer" />
+                  </div>
+                  <div class="form-group">
+                      <label for="nachricht">Ihre Nachricht (*)</label>
+                      <textarea name="nachricht" class="form-control" rows="4" id=nachricht placeholder="Nachricht" required></textarea>
+
+                  </div>
+                  <div class="form-group">
+                      <div class="g-recaptcha" data-sitekey="6LeQhCUUAAAAADzRvGL7HSNgAzEdb0mtc6817yga"></div>
+                  </div>
+                  <div class="form-group">
+                      <input type=submit class="btn btn-primary">
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/contact.js"></script>
 
 
 

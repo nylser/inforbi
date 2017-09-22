@@ -215,6 +215,11 @@ hr.small {
   font-size: 30px;
 }
 
+.modal-dialog {
+  background: white;
+  border-radius: 10px;
+}
+
 
 /* About */
 
