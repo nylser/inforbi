@@ -252,10 +252,7 @@ $('#background-terminal').terminal(function(command, term) {
                 await sleep(Math.random()*1000);
                 term.echo("- details -");
                 await sleep(Math.random()*1000);
-                var bday = new Date(1997, 10, 14);
-                var ageDifMs = Date.now() - bday.getTime();
-                var ageDate = new Date(ageDifMs);
-                term.echo("alter: " + String(Math.abs(ageDate.getUTCFullYear() - 1970)));
+                term.echo("alter: 20");
                 await sleep(Math.random()*1000);
                 term.echo("name: korbinian stein");
                 await sleep(Math.random()*1000);
