@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .text-vertical-center {
@@ -28,6 +28,17 @@ body {
     font-weight: 700;
     margin: 0;
     padding: 0;
+}
+
+@keyframes glowing {
+  0% { background-color: #01871f; box-shadow: 0 0 3px #01871f; }
+  50% { background-color: #2ebf4e; box-shadow: 0 0 10px #2ebf4e; }
+  100% { background-color: #01871f; box-shadow: 0 0 3px #01871f; }
+}
+
+#about-btn {
+  animation: glowing 3000ms infinite;
+  animation-timing-function: ease-in-out;
 }
 
 
@@ -211,8 +222,9 @@ hr.small {
   z-index: -100;
   /*height: 100%;!important
   width: 100%;*/
-  filter: blur(0.5px);
+  /*filter: blur(0.5px);*/
   font-size: 30px;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .modal-dialog {
