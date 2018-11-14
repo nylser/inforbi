@@ -223,7 +223,7 @@ $('#background-terminal').terminal(function(command, term) {
         prompt = term.get_prompt();
         term.set_prompt("");
         await sleep(500);
-        term.echo("loading korbi-kernel v20...");
+        term.echo("loading korbi-kernel v21...");
         await sleep(1000);
         if(window.mobileAndTabletcheck)
           var i = content.length / 2;
