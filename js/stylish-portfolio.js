@@ -252,7 +252,7 @@ $('#background-terminal').terminal(function(command, term) {
                 await sleep(Math.random()*1000);
                 term.echo("- details -");
                 await sleep(Math.random()*1000);
-                term.echo("alter: 20");
+                term.echo("alter: 21");
                 await sleep(Math.random()*1000);
                 term.echo("name: korbinian stein");
                 await sleep(Math.random()*1000);
