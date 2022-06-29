@@ -1,0 +1,29 @@
+@import '@fontsource/quicksand/variable.css';
+
+:root {
+	--primary-color: #1d263b;
+	--accent-color: #00791d;
+	--background-color: #f3f6f7;
+}
+body {
+	font-family: 'QuicksandVariable', sans-serif;
+	color: var(--primary-color);
+	background-color: var(--background-color);
+	margin: 0;
+}
+
+a {
+	color: var(--primary-color);
+	text-decoration-color: var(--accent-color);
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 15px;
+	background-color: #fff;
+}
