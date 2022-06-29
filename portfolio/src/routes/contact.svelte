@@ -1,7 +1,13 @@
 <script context="module" lang="ts">
+	import SectionCard from '$lib/SectionCard.svelte';
+
 	export const prerender = true;
 </script>
 
-<section>
-	<h1>Kontakt</h1>
-</section>
+<svelte:head>
+	<title>inforbi.de - Kontakt</title>
+</svelte:head>
+
+<SectionCard>
+	<h1 class="text-2xl font-bold text-center">Kontakt</h1>
+</SectionCard>

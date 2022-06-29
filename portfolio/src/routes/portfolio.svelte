@@ -1,12 +1,18 @@
 <script context="module" lang="ts">
+	import SectionCard from '$lib/SectionCard.svelte';
+
 	export const prerender = true;
 </script>
 
-<h1>Portfolio</h1>
-<section>
-	<h2>Projekt 1</h2>
-</section>
+<svelte:head>
+	<title>inforbi.de - Portfolio</title>
+</svelte:head>
 
-<section>
+<h1>Portfolio</h1>
+<SectionCard>
+	<h2>Projekt 1</h2>
+</SectionCard>
+
+<SectionCard>
 	<h2>Projekt 2</h2>
-</section>
+</SectionCard>

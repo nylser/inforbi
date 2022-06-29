@@ -1,8 +1,7 @@
 <script context="module" lang="ts">
-	export const prerender = true;
-</script>
+	import SectionCard from '$lib/SectionCard.svelte';
 
-<script lang="ts">
+	export const prerender = true;
 </script>
 
 <svelte:head>
@@ -10,7 +9,7 @@
 	<meta name="description" content="inforbi.de" />
 </svelte:head>
 
-<section class="m-5 p-10 rounded-xl shadow-xl text-center bg-white">
+<SectionCard>
 	<h1 class="text-2xl font-bold">Über mich</h1>
 	<img
 		src="new_me.webp"
@@ -32,7 +31,7 @@
 		<li class="m-1">Studium des B.Sc. Informatik seit Oktober 2017</li>
 		<li class="m-1">Co-Founder des ehrenamtlichen Start-Ups naklar.io</li>
 	</ul>
-</section>
+</SectionCard>
 
 <style>
 </style>
