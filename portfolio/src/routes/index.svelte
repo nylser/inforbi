@@ -3,7 +3,6 @@
 </script>
 
 <script lang="ts">
-	import Me from '../assets/new_me.jpeg?w=200&webp';
 </script>
 
 <svelte:head>
@@ -14,7 +13,8 @@
 <section class="m-5 p-10 rounded-xl shadow-xl text-center bg-white">
 	<h1 class="text-2xl font-bold">Über mich</h1>
 	<img
-		src={Me}
+		src="new_me.webp"
+		width="200px"
 		alt="Korbinian Stein"
 		id="me"
 		class="my-5 mx-auto max-w-[200px] rounded-xl border-green-700 border-2"

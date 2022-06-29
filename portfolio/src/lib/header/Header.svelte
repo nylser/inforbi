@@ -7,13 +7,14 @@
 </script>
 
 <script lang="ts">
-	import Logo from '../../assets/Logo.webp?width=250&webp';
 	import { page } from '$app/stores';
 	$: path = $page.url.pathname;
 </script>
 
 <header class="flex shadow-lg w-fit rounded-br-2xl p-1 bg-white">
-	<a class="logo" href="/" sveltekit:prefetch><img src={Logo} alt="" class="w-52" /></a>
+	<a class="logo" href="/" sveltekit:prefetch
+		><img src="Logo.webp" alt="" class="w-52" width="200px" /></a
+	>
 	<nav class="flex flex-col items-stretch text-center">
 		{#each routes as route}
 			<a
