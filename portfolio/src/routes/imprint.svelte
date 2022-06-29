@@ -3,8 +3,8 @@
 	const adSense = false;
 </script>
 
-<div class="impressum">
-	<h1>Impressum</h1>
+<div class="bg-white rounded p-5 m-5">
+	<h1 class="text-2xl font-bold my-2">Impressum</h1>
 	<p>Angaben gemäß § 5 TMG</p>
 	<p>
 		Korbinian Stein <br />

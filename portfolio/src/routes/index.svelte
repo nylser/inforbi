@@ -10,42 +10,28 @@
 	<meta name="description" content="inforbi.de" />
 </svelte:head>
 
-<section>
-	<h1>Über mich</h1>
-	<img src="/new_me.jpeg" alt="Korbinian Stein" id="me" />
-	<h2>Korbinian Stein</h2>
+<section class="m-5 p-10 rounded-xl shadow-xl text-center bg-white">
+	<h1 class="text-2xl font-bold">Über mich</h1>
+	<img
+		src="/new_me.jpeg"
+		alt="Korbinian Stein"
+		id="me"
+		class="my-5 mx-auto max-w-[200px] rounded-xl border-green-700 border-2"
+	/>
+	<h2 class="text-xl">Korbinian Stein</h2>
+
 	<ul>
-		<li class="lead">Interessen</li>
-		<li>Frühe Entdeckung der technischen Ader</li>
-		<li>Beherrschung des Programmierens durch eigenständiges Lernen</li>
-		<li>Faszination für Computerarchitektur und Philosophie</li>
-		<li>Schnelle Lernfähigkeit für neue Programmiersprachen</li>
-		<li class="lead">Auszug aus dem Lebenslauf</li>
-		<li>Selbständige im Informatikbereich seit März 2017</li>
-		<li>Studium des B.Sc. Informatik seit Oktober 2017</li>
-		<li>Co-Founder des ehrenamtlichen Start-Ups naklar.io</li>
+		<li class="m-2 font-bold text-lg">Interessen</li>
+		<li class="m-1">Frühe Entdeckung der technischen Ader</li>
+		<li class="m-1">Beherrschung des Programmierens durch eigenständiges Lernen</li>
+		<li class="m-1">Faszination für Computerarchitektur und Philosophie</li>
+		<li class="m-1">Schnelle Lernfähigkeit für neue Programmiersprachen</li>
+		<li class="m-2 font-bold text-lg">Auszug aus dem Lebenslauf</li>
+		<li class="m-1">Selbständige im Informatikbereich seit März 2017</li>
+		<li class="m-1">Studium des B.Sc. Informatik seit Oktober 2017</li>
+		<li class="m-1">Co-Founder des ehrenamtlichen Start-Ups naklar.io</li>
 	</ul>
 </section>
 
 <style>
-	#me {
-		height: 400px;
-		border-radius: 15px;
-		box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-	}
-	ul {
-		list-style-type: none;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-	}
-	li {
-		list-style: none;
-		margin: 0.75em;
-	}
-	.lead {
-		font-weight: 700;
-		font-size: 1.2rem;
-		margin: 1em;
-	}
 </style>
