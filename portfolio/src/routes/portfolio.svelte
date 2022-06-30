@@ -18,4 +18,18 @@
 			class="rounded-2xl border-orange-500 border hover:scale-105 transition-transform duration-200 hover:ease-out mx-auto"
 		/></a
 	>
+	<h3 class="text-lg font-semibold mt-3">Rollen:</h3>
+	<ul class="leading-tight">
+		<li>CTO</li>
+		<li>Co-Founder</li>
+		<li>Projektmanager</li>
+		<li>Tech-Lead</li>
+	</ul>
+	<h3 class="text-lg font-semibold mt-3">Technologien:</h3>
+	<ul class="leading-tight">
+		<li>Django + Django Rest Framework</li>
+		<li>Angular</li>
+		<li>Ionic + Capacitor</li>
+		<li>Swift & Java (native Bridge)</li>
+	</ul>
 </SectionCard>

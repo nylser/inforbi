@@ -29,7 +29,11 @@
 		<li class="m-2 font-bold text-lg">Auszug aus dem Lebenslauf</li>
 		<li class="m-1">Selbständige Tätigkeit im Informatikbereich seit März 2017</li>
 		<li class="m-1">Studium des B.Sc. Informatik seit Oktober 2017</li>
-		<li class="m-1">Co-Founder des ehrenamtlichen Start-Ups naklar.io</li>
+		<li class="m-1">
+			Co-Founder und CTO des ehrenamtlichen Start-Ups <a href="/portfolio" class="underline"
+				>naklar.io</a
+			>
+		</li>
 	</ul>
 </SectionCard>
 

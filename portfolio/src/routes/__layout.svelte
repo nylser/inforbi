@@ -3,7 +3,7 @@
 	import '../app.css';
 </script>
 
-<div class="wrapper">
+<div class="wrapper antialiased">
 	<Header />
 	<main class="container lg:px-5 mx-auto">
 		<slot />
