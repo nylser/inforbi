@@ -3,8 +3,7 @@ import type { RequestHandler } from './__types/contact';
 
 type OutputType = { success: boolean; error: string | undefined };
 
-export const post: RequestHandler<OutputType> = async ({ request, params }) => {
-	console.log(params);
+export const post: RequestHandler<OutputType> = async ({ request }) => {
 	const data = await request.formData();
 	if (!data) return { status: 400, body: { success: false, error: 'No data' } };
 
@@ -15,8 +14,7 @@ export const post: RequestHandler<OutputType> = async ({ request, params }) => {
 	if (!name || !email || !message)
 		return { status: 400, body: { success: false, error: 'Missing data' } };
 
-	console.log(name, email, message);
-	sendMail(email, `Kontaktanfrage von ${name}`, message);
+	await sendMail(email, `Kontaktanfrage von ${name}`, message);
 	return {
 		body: {
 			success: true,
