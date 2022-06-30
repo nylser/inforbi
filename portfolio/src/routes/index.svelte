@@ -27,7 +27,7 @@
 		<li class="m-1">Faszination für Computerarchitektur und Philosophie</li>
 		<li class="m-1">Schnelle Lernfähigkeit für neue Programmiersprachen</li>
 		<li class="m-2 font-bold text-lg">Auszug aus dem Lebenslauf</li>
-		<li class="m-1">Selbständige im Informatikbereich seit März 2017</li>
+		<li class="m-1">Selbständige Tätigkeit im Informatikbereich seit März 2017</li>
 		<li class="m-1">Studium des B.Sc. Informatik seit Oktober 2017</li>
 		<li class="m-1">Co-Founder des ehrenamtlichen Start-Ups naklar.io</li>
 	</ul>

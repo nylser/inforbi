@@ -12,13 +12,17 @@
 	<div class="prose-sm text-left">
 		<h1>Datenschutzerklärung</h1>
 		<p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
+		<br />
 		<strong>Verantwortlich im Sinne der DSGVO ist:</strong>
+		<br />
 		<ul>
 			<li>Korbinian Stein</li>
 			<li>Schwibbogenmauer 22, 86150 Augsburg</li>
 			<li>E-Mail: kstein (AT) &lt;diese Website&gt;</li>
 		</ul>
-		<h3>Kontaktformular</h3>
+		<br />
+		<strong>Kontaktformular</strong>
+		<br />
 		<span>
 			Wir stellen Ihnen ein Kontaktformular zur Verfügung, mit dem wir folgende personenbezogene
 			Daten erheben:
@@ -39,8 +43,9 @@
 			Punkt „Betroffenenrechte“.
 		</p>
 		<p>Ihre Daten werden nach Abschluss der Bearbeitung gelöscht.</p>
-
-		<h3>Betroffenenrechte</h3>
+		<br />
+		<strong>Betroffenenrechte</strong>
+		<br />
 		<p>
 			Sie haben als betroffene Person, das Recht auf Auskunft, das Recht auf Berichtigung oder
 			Löschung, das Recht auf Einschränkung der Verarbeitung und das Recht auf Widerspruch gegen die
