@@ -63,7 +63,7 @@
 				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 					name="message"
 					bind:value={message}
-					maxlength="500"
+					maxlength="5000"
 					minlength="20"
 					rows="3"
 					required
