@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	export let success: boolean | undefined = undefined;
+	export let error: string | undefined = undefined;
 	let name: string, email: string, message: string;
 
 	function handleSubmit() {
@@ -19,17 +20,22 @@
 	<h1 class="text-2xl font-bold text-center mb-5">Kontakt</h1>
 	{#if success}
 		<p class="bg-green-600 rounded-lg p-3 text-white w-fit mx-auto border-green-900 border-2">
-			Deine Anfrage wurde erfolgreich abgeschickt!
+			Die Anfrage wurde erfolgreich abgeschickt!
 		</p>
 	{:else}
+		{#if error}
+			<p class="bg-red-600 rounded-lg p-3 text-white w-fit mx-auto border-red-900 border-2">
+				Leider gab es einen Fehler beim Absenden deiner Anfrage!
+			</p>
+		{/if}
 		<form class="flex flex-col gap-5 text-left" method="post">
 			<label class="block">
-				<span class="text-gray-700">Voller Name *</span>
+				<span class="text-gray-700">Voller Name*</span>
 				<input
 					type="text"
 					class="mt-1 block w-full rounded-md 
 				border-gray-600 shadow-sm 
-				focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 					name="name"
 					bind:value={name}
 					placeholder=""
@@ -37,12 +43,12 @@
 				/>
 			</label>
 			<label class="block">
-				<span class="text-gray-700">E-Mail-Adresse *</span>
+				<span class="text-gray-700">E-Mail-Adresse*</span>
 				<input
 					type="email"
 					class="mt-1 block w-full rounded-md 
 				border-gray-600 shadow-sm 
-				focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 					name="email"
 					bind:value={email}
 					placeholder="john@example.com"
@@ -50,11 +56,11 @@
 				/>
 			</label>
 			<label class="block">
-				<span class="text-gray-700">Ihre Nachricht *</span>
+				<span class="text-gray-700">Ihre Nachricht*</span>
 				<textarea
 					class="mt-1 block w-full rounded-md 
 				border-gray-600 shadow-sm 
-				focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 					name="message"
 					bind:value={message}
 					maxlength="500"
@@ -70,5 +76,5 @@
 			/>
 		</form>
 	{/if}
-	<a href="/privacy" class="underline">Hinweise zum Datenschutz</a>
+	<a href="/privacy" class="block underline mt-5">Hinweise zum Datenschutz</a>
 </SectionCard>

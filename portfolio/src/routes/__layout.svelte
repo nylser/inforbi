@@ -5,7 +5,7 @@
 
 <div class="wrapper">
 	<Header />
-	<main class="container px-5 mx-auto">
+	<main class="container lg:px-5 mx-auto">
 		<slot />
 	</main>
 

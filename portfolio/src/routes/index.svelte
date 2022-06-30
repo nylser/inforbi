@@ -22,10 +22,10 @@
 
 	<ul>
 		<li class="m-2 font-bold text-lg">Interessen</li>
-		<li class="m-1">Frühe Entdeckung der technischen Ader</li>
+		<li class="m-1">frühe Entdeckung der technischen Ader</li>
 		<li class="m-1">Beherrschung des Programmierens durch eigenständiges Lernen</li>
 		<li class="m-1">Faszination für Computerarchitektur und Philosophie</li>
-		<li class="m-1">Schnelle Lernfähigkeit für neue Programmiersprachen</li>
+		<li class="m-1">schnelle Lernfähigkeit für neue Programmiersprachen</li>
 		<li class="m-2 font-bold text-lg">Auszug aus dem Lebenslauf</li>
 		<li class="m-1">Selbständige Tätigkeit im Informatikbereich seit März 2017</li>
 		<li class="m-1">Studium des B.Sc. Informatik seit Oktober 2017</li>
