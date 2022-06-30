@@ -14,7 +14,7 @@
 </svelte:head>
 
 <SectionCard>
-	<div class="prose-sm">
+	<div class="prose-sm text-left">
 		<h1>Impressum</h1>
 		<p>Angaben gemäß § 5 TMG</p>
 		<p>

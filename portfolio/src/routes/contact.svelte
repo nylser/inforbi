@@ -24,7 +24,7 @@
 	{:else}
 		<form class="flex flex-col gap-5 text-left" method="post">
 			<label class="block">
-				<span class="text-gray-700">Voller Name</span>
+				<span class="text-gray-700">Voller Name *</span>
 				<input
 					type="text"
 					class="mt-1 block w-full rounded-md 
@@ -37,7 +37,7 @@
 				/>
 			</label>
 			<label class="block">
-				<span class="text-gray-700">E-Mail-Adresse</span>
+				<span class="text-gray-700">E-Mail-Adresse *</span>
 				<input
 					type="email"
 					class="mt-1 block w-full rounded-md 
@@ -50,7 +50,7 @@
 				/>
 			</label>
 			<label class="block">
-				<span class="text-gray-700">Ihre Nachricht</span>
+				<span class="text-gray-700">Ihre Nachricht *</span>
 				<textarea
 					class="mt-1 block w-full rounded-md 
 				border-gray-600 shadow-sm 
@@ -70,4 +70,5 @@
 			/>
 		</form>
 	{/if}
+	<a href="/privacy" class="underline">Hinweise zum Datenschutz</a>
 </SectionCard>
