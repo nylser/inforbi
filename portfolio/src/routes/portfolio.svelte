@@ -15,7 +15,7 @@
 		<img
 			src="naklar_io_screen.webp"
 			alt="naklar.io Screenshot"
-			class="rounded-2xl border-orange-500 border hover:scale-105 transition-transform duration-200 hover:ease-out"
+			class="rounded-2xl border-orange-500 border hover:scale-105 transition-transform duration-200 hover:ease-out mx-auto"
 		/></a
 	>
 </SectionCard>
