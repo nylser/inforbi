@@ -6,7 +6,11 @@
 
 <svelte:head>
 	<title>inforbi.de</title>
-	<meta name="description" content="inforbi.de" />
+	<meta name="description" content="inforbi.de - Korbinian Stein" />
+	<meta
+		name="keywords"
+		content="inforbi, korbinian, stein, korbinian stein, korbinianstein, developer, web, web developer, webdesign, webdesigner, webdesigner korbinian stein"
+	/>
 </svelte:head>
 
 <SectionCard>
@@ -18,8 +22,8 @@
 		id="me"
 		class="my-5 mx-auto max-w-[200px] rounded-xl border-green-700 border-2"
 	/>
-	<h2 class="text-xl">Korbinian Stein</h2>
-
+	<h2 class="text-xl leading-none">Korbinian Stein</h2>
+	<small>leidenschaftlicher Informatiker</small>
 	<ul>
 		<li class="m-2 font-bold text-lg">Interessen</li>
 		<li class="m-1">frühe Entdeckung der technischen Ader</li>

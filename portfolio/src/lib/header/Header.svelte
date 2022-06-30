@@ -11,7 +11,9 @@
 	$: path = $page.url.pathname;
 </script>
 
-<header class="flex flex-wrap shadow-lg justify-center rounded-b-2xl p-1 bg-white mx-auto w-fit">
+<header
+	class="flex flex-wrap shadow-lg justify-center rounded-b-2xl rounded-t-2xl sm:rounded-t-none p-1 bg-white mx-auto w-fit"
+>
 	<a class="logo" href="/" sveltekit:prefetch
 		><img src="Logo.webp" alt="" class="w-52" width="200px" /></a
 	>
