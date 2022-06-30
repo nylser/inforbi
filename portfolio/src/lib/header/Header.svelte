@@ -11,11 +11,11 @@
 	$: path = $page.url.pathname;
 </script>
 
-<header class="flex shadow-lg w-fit rounded-br-2xl p-1 bg-white">
+<header class="flex flex-wrap shadow-lg justify-center rounded-b-2xl p-1 bg-white mx-auto w-fit">
 	<a class="logo" href="/" sveltekit:prefetch
 		><img src="Logo.webp" alt="" class="w-52" width="200px" /></a
 	>
-	<nav class="flex flex-col items-stretch text-center">
+	<nav class="flex flex-row flex-wrap items-center text-center">
 		{#each routes as route}
 			<a
 				href={route.path}

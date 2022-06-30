@@ -12,5 +12,5 @@ module.exports = {
 			backgroundColor: colors.slate[500]
 		}
 	},
-	plugins: [require('@tailwindcss/typography')]
+	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')]
 };

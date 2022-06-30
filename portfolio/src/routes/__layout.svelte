@@ -10,10 +10,8 @@
 	</main>
 
 	<footer>
-		<nav>
-			<ul>
-				<li><a href="/imprint">Impressum</a></li>
-			</ul>
+		<nav class="flex justify-center">
+			<a href="/imprint" class="text-green-900">Impressum</a>
 		</nav>
 	</footer>
 </div>
