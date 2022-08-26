@@ -15,7 +15,7 @@
 	class="flex flex-wrap shadow-lg justify-center rounded-b-2xl rounded-t-2xl sm:rounded-t-none p-1 bg-white mx-auto w-fit"
 >
 	<a class="logo" href="/" sveltekit:prefetch
-		><img src="Logo.webp" alt="" class="w-52" width="200px" /></a
+		><img src="/Logo.webp" alt="" class="w-52" width="200px" /></a
 	>
 	<nav class="flex flex-row flex-wrap items-center text-center">
 		{#each routes as route}

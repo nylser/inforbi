@@ -1,24 +1,19 @@
 import { sendMail } from '$lib/mailer';
-import type { RequestHandler } from './__types/contact';
+import { error } from '@sveltejs/kit';
+import type { Action } from './$types';
 
-type OutputType = { success: boolean; error: string | undefined };
-
-export const post: RequestHandler<OutputType> = async ({ request }) => {
+export const POST: Action = async ({ request }) => {
 	const data = await request.formData();
-	if (!data) return { status: 400, body: { success: false, error: 'No data' } };
+	if (!data) throw error(400, 'No data');
 
 	const name = data.get('name')?.toString();
 	const email = data.get('email')?.toString();
 	const message = data.get('message')?.toString();
 
-	if (!name || !email || !message)
-		return { status: 400, body: { success: false, error: 'Missing data' } };
+	if (!name || !email || !message) throw error(400, 'Missing data');
 
 	await sendMail(email, `Kontaktanfrage von ${name}`, message);
 	return {
-		body: {
-			success: true,
-			error: undefined
-		}
+		location: '/contact/success'
 	};
 };

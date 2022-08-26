@@ -1,7 +1,5 @@
-<script context="module" lang="ts">
+<script>
 	import SectionCard from '$lib/SectionCard.svelte';
-
-	export const prerender = true;
 </script>
 
 <svelte:head>
