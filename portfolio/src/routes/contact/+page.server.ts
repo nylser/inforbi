@@ -11,6 +11,7 @@ export const POST: Action = async ({ request }) => {
 	const message = data.get('message')?.toString();
 
 	if (!name || !email || !message) throw error(400, 'Missing data');
+	if (name === 'CrytoVaf') throw error(400, 'Invalid data');
 
 	await sendMail(email, `Kontaktanfrage von ${name}`, message);
 	return {
