@@ -36,6 +36,7 @@
 				>naklar.io</a
 			>
 		</li>
+		<li class="m-1">Studium des M.Sc. Informatik seit Oktober 2022</li>
 	</ul>
 </SectionCard>
 
