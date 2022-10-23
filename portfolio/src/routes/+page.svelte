@@ -16,6 +16,7 @@
 	<img
 		src="new_me.webp"
 		width="200px"
+		height="300px"
 		alt="Korbinian Stein"
 		id="me"
 		class="my-5 mx-auto max-w-[200px] rounded-xl border-green-700 border-2"
