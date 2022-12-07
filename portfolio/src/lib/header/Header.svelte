@@ -13,7 +13,6 @@
 
 <header
 	class="flex flex-wrap shadow-lg justify-center rounded-b-2xl rounded-t-2xl sm:rounded-t-none p-1 bg-white mx-auto w-fit"
-	data-sveltekit-prefetch
 >
 	<a class="logo" href="/"
 		><img src="/Logo.webp" alt="Home" class="w-52" width="210px" height="90px" /></a
