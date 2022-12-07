@@ -1,8 +1,8 @@
 <script lang="ts">
 	import SectionCard from '$lib/SectionCard.svelte';
-	import type { Errors } from './$types';
+	import type { ActionData } from './$types';
 
-	export let errors: Errors;
+	export let form: ActionData;
 	let name: string, email: string, message: string;
 
 	function handleSubmit() {
@@ -16,7 +16,7 @@
 
 <SectionCard>
 	<h1 class="text-2xl font-bold text-center mb-5">Kontakt</h1>
-	{#if errors}
+	{#if form?.error}
 		<p class="bg-red-600 rounded-lg p-3 text-white w-fit mx-auto border-red-900 border-2">
 			Leider gab es einen Fehler beim Absenden deiner Anfrage!
 		</p>

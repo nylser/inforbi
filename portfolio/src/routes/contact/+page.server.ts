@@ -1,20 +1,20 @@
 import { sendMail } from '$lib/mailer';
-import { error } from '@sveltejs/kit';
-import type { Action } from './$types';
+import { invalid, error, redirect } from '@sveltejs/kit';
+import type { Actions } from '@sveltejs/kit';
 
-export const POST: Action = async ({ request }) => {
-	const data = await request.formData();
-	if (!data) throw error(400, 'No data');
+export const actions: Actions = {
+	default: async ({ request }) => {
+		const data = await request.formData();
+		if (!data) throw error(400, 'No data');
 
-	const name = data.get('name')?.toString();
-	const email = data.get('email')?.toString();
-	const message = data.get('message')?.toString();
+		const name = data.get('name')?.toString();
+		const email = data.get('email')?.toString();
+		const message = data.get('message')?.toString();
 
-	if (!name || !email || !message) throw error(400, 'Missing data');
-	if (name === 'CrytoVaf') throw error(400, 'Invalid data');
+		if (!name || !email || !message) return invalid(400, { error: 'Missing data' });
+		if (name === 'CrytoVaf') return invalid(400, { error: 'Invalid data' });
 
-	await sendMail(email, `Kontaktanfrage von ${name}`, message);
-	return {
-		location: '/contact/success'
-	};
+		await sendMail(email, `Kontaktanfrage von ${name}`, message);
+		throw redirect(303, '/contact/success');
+	}
 };
