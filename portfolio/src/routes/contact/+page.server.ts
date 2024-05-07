@@ -30,5 +30,9 @@ export const actions: Actions = {
 
 		await sendMail(email, `Kontaktanfrage von ${name}`, message);
 		redirect(303, '/contact/success');
+
+		return {
+			success: true
+		};
 	}
 };

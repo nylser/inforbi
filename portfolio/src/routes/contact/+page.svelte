@@ -26,10 +26,7 @@
 		method="post"
 		use:enhance={{
 			type: 'recaptcha',
-			sitekey: import.meta.env.VITE_SITEKEY,
-			submit:
-				({ formData }) =>
-				({ result }) => {}
+			sitekey: import.meta.env.VITE_SITEKEY
 		}}
 	>
 		<label class="block">
