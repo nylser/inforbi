@@ -1,5 +1,5 @@
 import { sendMail } from '$lib/mailer';
-import { invalid, error, redirect } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import type { Actions } from '@sveltejs/kit';
 
 export const actions: Actions = {
@@ -11,8 +11,8 @@ export const actions: Actions = {
 		const email = data.get('email')?.toString();
 		const message = data.get('message')?.toString();
 
-		if (!name || !email || !message) return invalid(400, { error: 'Missing data' });
-		if (name === 'CrytoVaf') return invalid(400, { error: 'Invalid data' });
+		if (!name || !email || !message) return error(400, 'Missing data');
+		if (name === 'CrytoVaf') return error(400, 'Invalid data');
 
 		await sendMail(email, `Kontaktanfrage von ${name}`, message);
 		throw redirect(303, '/contact/success');
