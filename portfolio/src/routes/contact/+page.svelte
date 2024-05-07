@@ -1,17 +1,17 @@
 <script lang="ts">
 	import SectionCard from '$lib/SectionCard.svelte';
 	import type { ActionData } from './$types';
+	import enhance from 'svelte-captcha-enhance';
 
 	export let form: ActionData;
 	let name: string, email: string, message: string;
-
-	function handleSubmit() {
-		console.log(name, email, message);
-	}
 </script>
 
 <svelte:head>
 	<title>inforbi.de - Kontakt</title>
+	<script
+		src="https://www.google.com/recaptcha/api.js?render={import.meta.env.VITE_SITEKEY}"
+	></script>
 </svelte:head>
 
 <SectionCard>
@@ -21,13 +21,23 @@
 			Leider gab es einen Fehler beim Absenden deiner Anfrage!
 		</p>
 	{/if}
-	<form class="flex flex-col gap-5 text-left" method="post">
+	<form
+		class="flex flex-col gap-5 text-left"
+		method="post"
+		use:enhance={{
+			type: 'recaptcha',
+			sitekey: import.meta.env.VITE_SITEKEY,
+			submit:
+				({ formData }) =>
+				({ result }) => {}
+		}}
+	>
 		<label class="block">
 			<span class="text-gray-700">Voller Name*</span>
 			<input
 				type="text"
-				class="mt-1 block w-full rounded-md 
-				border-gray-600 shadow-sm 
+				class="mt-1 block w-full rounded-md
+				border-gray-600 shadow-sm
 				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 				name="name"
 				bind:value={name}
@@ -39,8 +49,8 @@
 			<span class="text-gray-700">E-Mail-Adresse*</span>
 			<input
 				type="email"
-				class="mt-1 block w-full rounded-md 
-				border-gray-600 shadow-sm 
+				class="mt-1 block w-full rounded-md
+				border-gray-600 shadow-sm
 				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 				name="email"
 				bind:value={email}
@@ -51,8 +61,8 @@
 		<label class="block">
 			<span class="text-gray-700">Ihre Nachricht*</span>
 			<textarea
-				class="mt-1 block w-full rounded-md 
-				border-gray-600 shadow-sm 
+				class="mt-1 block w-full rounded-md
+				border-gray-600 shadow-sm
 				focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50"
 				name="message"
 				bind:value={message}
