@@ -5,7 +5,7 @@ import type { Actions } from '@sveltejs/kit';
 export const actions: Actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
-		if (!data) throw error(400, 'No data');
+		if (!data) error(400, 'No data');
 
 		const name = data.get('name')?.toString();
 		const email = data.get('email')?.toString();
@@ -15,6 +15,6 @@ export const actions: Actions = {
 		if (name === 'CrytoVaf') return error(400, 'Invalid data');
 
 		await sendMail(email, `Kontaktanfrage von ${name}`, message);
-		throw redirect(303, '/contact/success');
+		redirect(303, '/contact/success');
 	}
 };
