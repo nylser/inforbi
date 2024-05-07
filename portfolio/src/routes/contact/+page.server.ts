@@ -17,7 +17,7 @@ export const actions: Actions = {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
-			body: `secret=${import.meta.env.VITE_RECAPTCHA_SECRET}&response=${recaptcha_response}`
+			body: `secret=${import.meta.env.RECAPTCHA_SECRET}&response=${recaptcha_response}`
 		}).then((res) => res.json());
 
 		if (!recaptcha.success || recaptcha.score < 0.5) return fail(400, { error: 'Error' });
