@@ -14,9 +14,12 @@
 		<strong>Verantwortlich im Sinne der DSGVO ist:</strong>
 		<br />
 		<ul>
-			<li>Korbinian Stein</li>
-			<li>Schwibbogenmauer 22, 86150 Augsburg</li>
-			<li>E-Mail: kstein (AT) &lt;diese Website&gt;</li>
+				<li>Online-Impressum.de</li>
+				<li>Creator: Korbinian Stein</li>
+			  <li>Europaring 90</li>	
+			  <li>53757 Sankt Augustin</li>	
+			  <li>hi@inforbi.de</li>	
+			  <li>Kontakformular: https://inforbi.de/contact</li>	
 		</ul>
 		<br />
 		<strong>Kontaktformular</strong>
