@@ -14,14 +14,12 @@
 		<h1>Impressum</h1>
 		<p>Angaben gemäß § 5 TMG</p>
 		<p>
+			Online-Impressum.de
 			Korbinian Stein <br />
-			Schwibbogenmauer 22<br />
-			86150 Augsburg <br />
-		</p>
-		<p>
-			<strong>Kontakt:</strong> <br />
-			Telefon: +49 176 72207211<br />
-			E-Mail: kstein (AT) &lt;diese Website&gt;<br />
+			Europaring 90 <br />
+			53757 Sankt Augustin<br />
+			hi@inforbi.de<br />
+			Kontakformular: https://inforbi.de/contact
 		</p>
 		<p>
 			<strong>Haftungsausschluss: </strong><br /><br /><strong>Haftung für Inhalte</strong><br /><br
