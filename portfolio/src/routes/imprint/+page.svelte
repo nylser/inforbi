@@ -14,8 +14,8 @@
 		<h1>Impressum</h1>
 		<p>Angaben gemäß § 5 TMG</p>
 		<p>
-			Online-Impressum.de
-			Korbinian Stein <br />
+			Online-Impressum.de <br />
+			Creator: Korbinian Stein <br />
 			Europaring 90 <br />
 			53757 Sankt Augustin<br />
 			hi@inforbi.de<br />
