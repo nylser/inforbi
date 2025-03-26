@@ -1,0 +1,13 @@
+export { default as PersonIcon } from './PersonIcon.svelte';
+export { default as LightbulbIcon } from './LightbulbIcon.svelte';
+export { default as CalendarIcon } from './CalendarIcon.svelte';
+export { default as GlobeIcon } from './GlobeIcon.svelte';
+export { default as BriefcaseIcon } from './BriefcaseIcon.svelte';
+export { default as CodeIcon } from './CodeIcon.svelte';
+export { default as LaptopIcon } from './LaptopIcon.svelte';
+export { default as GithubIcon } from './GithubIcon.svelte';
+export { default as LockIcon } from './LockIcon.svelte';
+export { default as ChipIcon } from './ChipIcon.svelte';
+export { default as FlaskIcon } from './FlaskIcon.svelte';
+export { default as LightningIcon } from './LightningIcon.svelte';
+export { default as InfoIcon } from './InfoIcon.svelte'; 
