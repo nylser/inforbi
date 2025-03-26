@@ -2,6 +2,7 @@
 	const routes = [
 		{ path: '/', name: 'Über mich' },
 		{ path: '/portfolio', name: 'Portfolio' },
+		{ path: '/services', name: 'Dienste' },
 		{ path: '/contact', name: 'Kontakt' }
 	];
 </script>
