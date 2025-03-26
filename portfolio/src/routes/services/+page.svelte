@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { CodeIcon, LockIcon, FlaskIcon, ChipIcon, LightningIcon } from '$lib/components/svg';
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -8,9 +9,7 @@
 	<div class="grid md:grid-cols-2 gap-8">
 		<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-t-4 border-green-700">
 			<div class="flex items-center mb-4">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-				</svg>
+				<CodeIcon size="h-10 w-10" className="mr-3" />
 				<h2 class="text-2xl font-semibold text-green-900">Deep System Debugging</h2>
 			</div>
 			<p class="mb-4 text-gray-700">
@@ -27,9 +26,7 @@
 
 		<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-t-4 border-green-700">
 			<div class="flex items-center mb-4">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-				</svg>
+				<LockIcon className="mr-3" />
 				<h2 class="text-2xl font-semibold text-green-900">Security Auditing</h2>
 			</div>
 			<p class="mb-4 text-gray-700">
@@ -47,18 +44,14 @@
 
 	<div class="mt-8 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-700">
 		<div class="flex items-center mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-			</svg>
+			<FlaskIcon className="mr-3" />
 			<h2 class="text-2xl font-semibold text-green-900">Meine Qualifikationen</h2>
 		</div>
 		
 		<div class="grid md:grid-cols-2 gap-6">
 			<div class="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow">
 				<h3 class="text-xl font-medium mb-2 text-green-800 flex items-center">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-					</svg>
+					<ChipIcon className="mr-2" />
 					Technologie-Stack
 				</h3>
 				<p class="mb-3 text-gray-700">
@@ -77,9 +70,7 @@
 			
 			<div class="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow">
 				<h3 class="text-xl font-medium mb-2 text-green-800 flex items-center">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-					</svg>
+					<CodeIcon className="mr-2" />
 					System-Expertise
 				</h3>
 				<p class="mb-3 text-gray-700">
@@ -98,9 +89,7 @@
 
 	<div class="mt-8 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-700">
 		<div class="flex items-center mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-			</svg>
+			<LightningIcon className="mr-3" />
 			<h2 class="text-2xl font-semibold text-green-900">Warum KI-Code-Spezialisierung?</h2>
 		</div>
 		<p class="text-gray-700">
